@@ -1,0 +1,11 @@
+for frontend do 
+npm i 
+installs new packages from package.json (dont touch the file manually)
+updates automatically
+
+
+for backend do
+pip -r requirements.txt 
+
+to update 
+pip freeze > requirements.txt 

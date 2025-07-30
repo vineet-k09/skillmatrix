@@ -1,0 +1,20 @@
+global styles context from Context/themecontext.tsx
+then that gives us 
+1. theme.provider -> wraps gloablly (no changes required)
+2. themewrapper from componenets/themewrapper.tsx gives us a wrapper for 
+<body> to globally change theme
+--> no changes required ($theme - variable is the one that make those changes)
+3. toggleTheme function for changing theme -- use for change theme buttons and all
+
+
+finally use tailwind normally without giving the bg- (background colour)
+or text (font colour) -- its setup by default
+
+for variable
+text-[var(--accent)]
+text-[var(--primary)]
+text-[var(--secondary)]
+use whichever u want to use
+
+use tailwind intellisense on definitions of tailwindcss classes
+

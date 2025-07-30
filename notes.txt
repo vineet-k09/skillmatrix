@@ -1,1 +1,27 @@
-git 
+Important things to be there : As per guidelines
+
+1. Teachers:
+        -> Able to add course, update, delete course
+        -> Set price 
+2. Students:
+        -> Enroll, access, course
+        -> Preview course
+3. Dashboard:
+        -> Student dashboard: progress, courses enrolled, deadlines of assignments or live classes
+        -> Teacher dashboard: student analytics, courses created, earning details
+4. Search and Filter: 
+        -> Search: courses, teachers
+        -> Filter: price, rating of course, level, category
+5. Students rate and review , teachers respond to review
+
+6. UI:
+        ->Dark/Light mode
+        ->Mobile view
+7.User Authernication based on roles: student, teacher, Author
+
+8. Resuable components of code and modular API
+
+9. Upload to Cloud
+
+-------------------END OF GUIDELINE REQUIREMENTS ----------------------------------
+

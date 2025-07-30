@@ -16,9 +16,11 @@ root.render(
   <React.StrictMode>
     <ThemeProvider>
       <BrowserRouter>
-      <Navbar></Navbar>
-        <Routes><Route>{<App />}</Route></Routes>
-        <Routes><Route>{<Login />}</Route></Routes>
+      <Navbar />
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
       </BrowserRouter>
     </ThemeProvider>
   </React.StrictMode>

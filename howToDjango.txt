@@ -1,0 +1,171 @@
+> python --version
+
+> python -m venv env 
+~~~~~~~~~~~~
+-m ~ module
+venv ~ virtual env
+env ~ folder name
+~~~~~~~~~~~~~
+
+To enable the 
+>
+inside env/scripts/activitate will open virtualenv
+
+Install Django
+> python -m pip install Django
+
+> django -admin --version
+or
+> pip list
+
+Create project project1
+> django-admin startproject projectOne
+
+>python manage.py runserver
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To create a application command is
+> django-admin startapp appOne
+
+settings.py>
+add "appOne" item into installed apps list
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+appOne>views.py>
+type > 
+
+from django.http import HttpResponse
+def LandingPage(request):
+    return httpresponse("hello world")
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+appOne > create urls.py 
+in appOne directory and type >
+
+from django.contrib import admin
+from django.urls import path
+
+urlpatterns = [
+    path('LandingPage/', views.landingpage, name = "Landing Page")
+]
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+projectOne>urls.py>
+attacth the link of appOne.url
+
+> from django.urls import include
+path('', include(appOne.urls))
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Auth & Page rendering
+
+to connect a file to another file -> base.html
+
+register.html
+{% extends "base.html" %}
+
+{% block content %}
+<div>
+ABCD
+</div>
+{% endblock %}
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+make registerView functoin in views.py file to rernder the register.html template
+
+create a path in urls.py file to execute the registerView functoin
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+creating forms
+
+projectOne/appOne/forms.py
+from django import forms
+class RegisterForm(forms.ModelForm):
+    username = forms.CharField(max_length=20, required=True)
+    email = forms.EmailField(max_length=40, required=True)
+    password = forms.CharField(max_length=30, required=True)
+    confirm_password = forms.CharField(max_length=30, required=True)
+    class Meta:
+        model = Register
+        fields = ("",)
+def clean functoin to validate if password is matching or not
+in class meta we define the model - so we are going to use an existing model in model.py file
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+from old mysql files and stuff
+
+python -m pip install mysqlclient
+
+(env) PS E:\Saturdays\Django\projectOne> python manage.py makemigrations
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+so for forms here what we used is model forms kinda thing in the forms.py which gives us forms.save() method and using user.save() we save the data in MySQL
+
+
+login page use a normal form idk why
+
+
+check forms.py for main logic besides 
+def LoginPage(request):
+    form=LoginForm(request.POST)
+    if request.method=="POST":
+        form=LoginForm(request.POST)
+        if form.is_valid():
+            un = form.cleaned_data['username']
+            pwd = form.cleaned_data['password']
+            user = authenticate(request, username=un,password=pwd)
+            if user is not None:
+                login(request,user)
+                messages.success(request, 'Login Succesful')
+                return redirect('dashboardPage')
+            else:
+                messages.warning(request, 'Login UnSuccesful')
+                return render(request,'login.html',{'form':form})  
+        else:
+            return render(request,'login.html',{'form':form})
+    return render(request, 'login.html', {'form':form})
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+middleware.py
+
+to prevent unauthourized access:
+
+ if user.is_authenticated and path in [reverse('login'), reverse('register')]:
+            return redirect('dashboard')
+
+        # Redirect unauthenticated users away from protected pages
+        protected_paths = [reverse('dashboard')] 
+        if not user.is_authenticated and path in protected_paths:
+            return redirect('home')
+
+        return self.get_response(request)
+
+~~~~~~~~~~~~~~~~``
+pip install djangorestframework
+
+add rest_framwork to application list
+
+in models.py 
+make a model -> taskboard {taskName, taskDescription}
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
+from rest_framework import serializers
+from .models import TaskBoard
+
+class TaskSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = TaskBoard
+        fields = '_all_'
+
+then migrate
+
+router = DefaultRouter()
+router.register('tasks',TaskView)
+path('api/', include(router.urls)),
+
+for talking to db 
+get,post,put, delete -> http://localhost:8000/api/tasks/{index}

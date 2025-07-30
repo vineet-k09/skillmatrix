@@ -1,0 +1,12 @@
+root/
+│
+├── backend/
+│   ├── manage.py
+│   └── backend/
+│       └── settings.py
+│
+├── frontend/
+│   └── nextapp/  <-- your Next.js app here
+│
+└── env/
+    └── Scripts/activate  <-- Python virtual environment

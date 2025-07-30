@@ -25,3 +25,9 @@ Important things to be there : As per guidelines
 
 -------------------END OF GUIDELINE REQUIREMENTS ----------------------------------
 
+--> Live class 
+--> Gamification: Adding badges, leaderboard
+--> Q & A Section (Thread pipelines)
+--> Cerificate (optional)
+--> Quizzes and assignments 
+

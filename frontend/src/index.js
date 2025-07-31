@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import Login from './pages/login';
+import Login from './pages/Login';
 
 import Navbar from './components/Navbar';
 

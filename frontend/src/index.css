@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 code {
@@ -13,11 +14,15 @@ code {
 }
 
 body.light {
+  --bg: #ffffff;
+  --color: #000000;
   background-color: #ffffff;
   color: #000000;
 }
 
 body.dark {
+  --bg: #1e1e1e;
+  --color: #ffffff;
   background-color: #1e1e1e;
   color: #ffffff;
 }
@@ -28,4 +33,6 @@ button {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  background-color: var(--color);
+  color: var(--bg);transition: background-color 2.4s ease, color 0.4s ease;
 }

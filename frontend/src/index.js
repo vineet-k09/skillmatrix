@@ -2,7 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import Login from './pages/login';
+
+import Dashboard from './pages/dashboard/Dashboard';
+import Auth from './pages/authentication/Auth';
 
 import Navbar from './components/Navbar';
 
@@ -19,7 +21,8 @@ root.render(
       <Navbar />
         <Routes>
           <Route path="/" element={<App />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/auth/:mode" element={<Auth />} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>

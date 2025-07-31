@@ -15,7 +15,7 @@ Important things to be there : As per guidelines
 5. Students rate and review , teachers respond to review
 
 6. UI:
-        ->Dark/Light mode
+        ->Dark/Light mode - Done
         ->Mobile view
 7.User Authernication based on roles: student, teacher, Author
 

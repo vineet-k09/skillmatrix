@@ -11,8 +11,8 @@ export default function Navbar(){
                 {theme === 'dark' ? <Sun /> : <Moon />}
             </button>
             <Link to={'/dashboard'}>Dashboard</Link>
-            <Link to='/auth/login'>Login</Link>
-            <Link to='/auth/register'>Register</Link>
+            <Link to={'/auth/login'}>Login</Link>
+            <Link to={'/auth/register'}>Register</Link>
         </nav>
     )
 }

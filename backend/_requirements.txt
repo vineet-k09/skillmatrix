@@ -1,0 +1,12 @@
+# Dont touch run -
+# pip freeze>requirements.txt ---> to update
+# pip -r requirements.txt ---> to install
+asgiref==3.9.1
+async-timeout==5.0.1
+Django==5.2.4
+django-redis==6.0.0
+python-decouple==3.8
+redis==6.2.0
+sqlparse==0.5.3
+typing_extensions==4.14.1
+tzdata==2025.2

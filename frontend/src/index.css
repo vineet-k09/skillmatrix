@@ -16,7 +16,7 @@ code {
 body.light {
   --bg: #ffffff;
   --color: #000000;
-  background-color: #ffffff;
+  background-color: #cdb4db;
   color: #000000;
 }
 
@@ -35,4 +35,8 @@ button {
   cursor: pointer;
   background-color: var(--color);
   color: var(--bg);transition: background-color 2.4s ease, color 0.4s ease;
+}
+
+nav{
+  border-bottom: 1px solid var(--color);
 }

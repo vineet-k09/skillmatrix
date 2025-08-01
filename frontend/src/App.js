@@ -3,9 +3,8 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>This is home page</p>
-      </header>
+      Home Page
+      <p>Welcome to the SkillMatrix application!</p>
     </div>
   );
 }

@@ -12,6 +12,8 @@ import reportWebVitals from './reportWebVitals';
 import ThemeProvider from './context/ThemeProvider';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 
+// import 'bootstrap/dist/css/bootstrap.css';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

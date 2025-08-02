@@ -1,5 +1,4 @@
 env/
-_frontend/
 node_modules/
 vineet*.md
 .env

@@ -54,6 +54,9 @@ export default function Navbar(){
 
         <nav class="navbar navbar-expand-lg ">
   <div class="container-fluid">
+     <a class="navbar-brand" href="/">
+      <img src="/SKILL_MATRIX_LOGO.png" alt="SkillMatrix Logo" width="30" height="24"  style={{ maxWidth: '150px', height: 'auto' }} />
+    </a>
     <Link className="navbar-brand text-primary fs-1" to={'/'}>SkillMatriX</Link>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>

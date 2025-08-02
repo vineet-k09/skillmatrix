@@ -1,3 +1,15 @@
+body.light {
+  --bg: #cdb4db;
+  --color: #000000;
+  --link: #000000;
+}
+
+body.dark {
+  --bg: #1e1e1e;
+  --color: #ffffff;
+  --link: #ffffff;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,7 +17,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  transition: background-color 0.4s ease, color 0.4s ease;
+  /* transition: background-color 0.4s, color 0.4s; */
+  background-color: var(--bg);
+  color: var(--color);
 }
 
 code {
@@ -13,19 +27,6 @@ code {
     monospace;
 }
 
-body.light {
-  --bg: #ffffff;
-  --color: #000000;
-  background-color: #cdb4db;
-  color: #000000;
-}
-
-body.dark {
-  --bg: #1e1e1e;
-  --color: #ffffff;
-  background-color: #1e1e1e;
-  color: #ffffff;
-}
 
 button {
   margin-top: 1rem;
@@ -34,9 +35,10 @@ button {
   border-radius: 4px;
   cursor: pointer;
   background-color: var(--color);
-  color: var(--bg);transition: background-color 2.4s ease, color 0.4s ease;
+  color: var(--bg);
+  transition: background-color 2.4s ease, color 0.4s ease;
 }
 
-nav{
+nav {
   border-bottom: 1px solid var(--color);
 }

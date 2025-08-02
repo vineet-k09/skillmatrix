@@ -1,12 +1,12 @@
-import { Navigate } from "react-router-dom";
+// import { Navigate } from "react-router-dom";
 import StudentDashboard from "./StudentDashboard";
 import AdminDashboard from "./AdminDashboard";
 import TeacherDashboard from "./TeacherDashboard";
-import ErrorPage from "../ErrorPage";
+// import ErrorPage from "../ErrorPage";
 // all imports r usefull later on
 
 export default function Dashboard() {
-    const user = JSON.parse(localStorage.getItem("user"));
+    // const user = JSON.parse(localStorage.getItem("user"));
 
     // dont remove the below code 
     

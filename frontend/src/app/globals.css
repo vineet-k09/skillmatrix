@@ -1,0 +1,26 @@
+/* frontend/src/app/globals.css */
+@import "tailwindcss";
+
+:root {
+  --primary: #000000;
+  --secondary: #ffffff;
+  --accent: #0070f3;
+}
+
+.light {
+  --primary: #000000;
+  --secondary: #ffffff;
+  --accent: #0070f3;
+}
+
+.dark {
+  --primary: #ffffff;
+  --secondary: #121212;
+  --accent: #ff4081;
+}
+
+body {
+  background-color: var(--secondary);
+  color: var(--primary);
+  transition: background-color 0.3s, color 0.3s;
+}
